@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voice_app/colors/pallete.dart';
+import 'package:voice_app/pages/feature_lists.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -59,12 +60,12 @@ class HomePage extends StatelessWidget {
             margin:
                 const EdgeInsets.symmetric(horizontal: 40).copyWith(top: 30),
             decoration: BoxDecoration(
-                border: Border.all(
-                  color: Pallete.borderColor,
-                ),
-                borderRadius:
-                    BorderRadius.circular(20).copyWith(topLeft: Radius.zero),
-                    ),
+              border: Border.all(
+                color: Pallete.borderColor,
+              ),
+              borderRadius:
+                  BorderRadius.circular(20).copyWith(topLeft: Radius.zero),
+            ),
             child: const Padding(
               padding: EdgeInsets.symmetric(vertical: 10.0),
               child: Text(
@@ -75,6 +76,54 @@ class HomePage extends StatelessWidget {
                     fontFamily: 'Cera Pro'),
               ),
             ),
+          ),
+
+          // small text here
+          Container(
+            padding: const EdgeInsets.all(10),
+            alignment: Alignment.centerLeft,
+            margin: const EdgeInsets.only(
+              top: 10,
+              left: 22,
+            ),
+            child: const Text(
+              "Here are few features",
+              style: TextStyle(
+                  fontFamily: 'Cera Pro',
+                  color: Pallete.mainFontColor,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+
+          // features  list
+          Column(
+            children: const [
+              // chat gpt box
+              FeatureBox(
+                color: Pallete.firstSuggestionBoxColor,
+                headerText: 'ChatGPT',
+                descriptionText:
+                    'A smarter way to stay organized and informed with ChatGPT',
+              ),
+
+              // Dall-E box
+
+              FeatureBox(
+                color: Pallete.secondSuggestionBoxColor,
+                headerText: 'Dall-E',
+                descriptionText:
+                    'Get inspired and stay creative with personal assistant powered by Dall-E',
+              ),
+
+              // smart voice Assistant box
+              FeatureBox(
+                color: Pallete.thirdSuggestionBoxColor,
+                headerText: 'Smart Voice Assistant',
+                descriptionText:
+                    'Get the best of both worlds with a voice assistant powered by Dall-E and ChatGPT',
+              ),
+            ],
           )
         ],
       ),

@@ -26,6 +26,8 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(backgroundColor: Pallete.whiteColor),
       ),
 
+      
+
       // home page
       home: HomePage(),
     );
