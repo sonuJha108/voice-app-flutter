@@ -20,25 +20,38 @@ class FeatureBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    // create the container widget and write the style code
     return Container(
       margin: EdgeInsets.symmetric(
         horizontal: 35,
         vertical: 10,
       ),
+
+      // decoration property  write here
       decoration: BoxDecoration(
         color: color,
         borderRadius: const BorderRadius.all(
           Radius.circular(15),
         ),
       ),
+
+      // create the child and the widget with padding 
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20.0).copyWith(left: 15),
+
+        // column widget code
         child: Column(
+
+          // column  withe there children 
           children: [
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
+                // init the final header text
                 headerText,
+
+                // style the text 
                 style: const TextStyle(
                   fontFamily: 'Cera Pro',
                   color: Pallete.blackColor,
@@ -47,9 +60,13 @@ class FeatureBox extends StatelessWidget {
                 ),
               ),
             ),
+
+            // for the spacing in this widget
             SizedBox(
               height: 3,
             ),
+
+            // enternal text with the padding widget and style 
             Padding(
               padding: const EdgeInsets.only(right: 20),
               child: Text(
